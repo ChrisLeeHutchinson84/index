@@ -1,0 +1,203 @@
+/* Make sure the video fills the container without stretching */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100');
+
+html, body {
+  font-family: 'Roboto Mono', monospace;
+  background: transparent;
+  height: 100%;
+}
+
+.quote {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-weight: 100;
+  font-size: 28px;
+  color: #FFA500;
+}
+
+.dud {
+  color: #757575;
+}
+
+video {
+  width: 100%; /* Make the video fill the container width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Optional: To ensure the video covers the section */
+}
+
+.about_qouta {
+  color: #FFA500 !important; 
+  font-size: 16px; 
+}
+.card_type{
+	font-size: 12px;
+}
+
+/* Adjust the space for the about-section */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Reduced space between image and text */
+  margin: 20px 0; /* Reduced space above and below the section */
+}
+
+/* Section for each image and text */
+.about-image-left, .about-image-right {
+  flex: 1;
+  max-width: 35%;
+}
+
+.about-image-left img, .about-image-right img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Text container */
+.about-text {
+  flex: 2;
+  max-width: 60%;
+}
+
+/* Paragraph styling */
+.about-text p {
+  margin: 10px 0;
+  line-height: 1.6;
+	  color: #FFFFFF;
+}
+
+/* Styling for the new section */
+.new-section {
+  padding: 10px; /* Reduced padding */
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  margin-top: 20px; /* Reduced space between sections */
+}
+
+.new-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px; /* Reduced margin between title and content */
+}
+
+.new-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #FFFFFF;
+}
+
+.additional-content {
+  margin-top: 10px; /* Reduced margin */
+  background-color: #fff;
+  padding: 10px; /* Reduced padding */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main container for cards */
+.creative-box-container {
+  display: flex;
+  justify-content: center; /* Horizontally center all boxes */
+  gap: 20px; /* Space between the boxes */
+  flex-wrap: wrap; /* Allow boxes to wrap for smaller screens */
+  align-items: stretch; /* Stretch boxes to equal heights */
+}
+
+/* Individual card item settings */
+.creative-box-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  text-align: center;
+  width: 200px; 
+}
+
+.creative-box-item2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start; 
+  text-align: center;
+  width: 200px; 
+  line-height: 1; 
+  position: relative;
+  margin: 10px 0px 0px;
+}
+
+.creative-box-item .creative-box-title,
+.creative-box-item2 .creative-box-title {
+  margin-bottom: 20px; 
+}
+
+/* Styling for card titles */
+.creative-box-title {
+  font-size: 1.2rem;
+  margin: 0; 
+  padding: 5px 0; 
+  text-align: center; 
+  width: 100%; 
+  color: #000000;
+}
+
+/* Cards styling */
+.creative-box {
+  background: #191c29;
+  padding: 20px 10px; 
+  border-radius: 8px;
+  width: 100%; 
+  min-height: 400px; 
+  max-height: 400px; 
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  font-family: cursive;
+  color: rgb(88 199 250 / 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Adjust hover effect */
+.creative-box:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s ease-in-out;
+}
+
+/* Ensure consistent paragraph styling inside cards */
+.creative-box-type {
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.creative-box::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
